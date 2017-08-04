@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstantEffects : MonoBehaviour {
+public class InstantEffects : Effects {
 
 	// Use this for initialization
 	void Start () {

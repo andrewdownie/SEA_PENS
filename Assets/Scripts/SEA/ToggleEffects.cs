@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToggleEffects : MonoBehaviour {
+public class ToggleEffects : Effects {
 
 	// Use this for initialization
 	void Start () {

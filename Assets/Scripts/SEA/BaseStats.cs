@@ -5,7 +5,13 @@ using Sirenix.OdinInspector;
 
 public class BaseStats : MonoBehaviour {
 
-	[SerializeField][TabGroup("Stats")]
-	public float movement_speed, weight_capacity;
+	[TabGroup("Stats")]
+	public Stats stats;		
+
+
+	void OnValidate(){
+		GetComponent<ActualStats>().RecalculateActualStats();	
+		GetComponent<EffectiveStats>().RecalculateEffectiveStats();
+	}
 	
 }

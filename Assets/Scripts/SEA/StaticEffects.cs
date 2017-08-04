@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticEffects : MonoBehaviour {
+public class StaticEffects : Effects {
 
 	// Use this for initialization
 	void Start () {

@@ -4,15 +4,16 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 
 public class BaseAttributes : MonoBehaviour {
-	[SerializeField][TabGroup("Attributes")]
-	public float strength, agility;
+	[TabGroup("Attributes")]
+	public Attributes attributes;
+	[SerializeField][TabGroup("References")]
+	ActualStats actualStats;
 
 
 	void OnValidate(){
-		ActualAttributes aa = GetComponent<ActualAttributes>();
-		if(aa != null){
-			aa.RecalculateActualAttributes();
-		}
+		GetComponent<ActualAttributes>().RecalculateActualAttributes();
+		GetComponent<EffectiveAttributes>().RecalculateEffectiveAttributes();
+		actualStats.RecalculateActualStats();
 	}
 	
 
