@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 
-public abstract class Effects : MonoBehaviour {
-    //TODO: turn effects into a dictionary of lists
-    //      Dictionary<EffectTypeEnum, Dictionary<(WAT GOES HERE, i want differnt enums to, but), float>>
+public abstract class Effects : SerializedMonoBehaviour {
 
-    [TabGroup("Effects")]
+    [OdinSerialize][TabGroup("Effects")]
     public List<Effect> effectList;
     [TabGroup("References")]
     public EffectiveAttributes effectiveAtts;

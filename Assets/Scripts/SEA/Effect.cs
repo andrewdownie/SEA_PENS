@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 
 
 //NOTE: percents are in the range [0, 1]
 [System.Serializable]
 public class Effect {
+	[TabGroup("M")]
+	public EffectMetaInfo metaInfo;
 	[TabGroup("+A")]	
 	public Attributes positiveAttribues;
 	[TabGroup("-A")]	
 	public Attributes negativeAttribues;
 
-	[TabGroup("+S")]	
+	[OdinSerialize][TabGroup("+S")]	
 	public Dictionary<StatsEnum, float> positiveStats;
 	[TabGroup("-S")]	
 	public Dictionary<StatsEnum, float> negativeStats;
@@ -22,12 +25,12 @@ public class Effect {
 	public Dictionary<StatsEnum, float> negativePercentStats;
 
 	[TabGroup("+D")]
-	public Damage positiveDamage;
+	public Dictionary<DamageEnum, float> positiveDamage;
 	[TabGroup("-D")]
-	public Damage negativeDamage;
+	public Dictionary<DamageEnum, float> negativeDamage;
 	[TabGroup("+%D")]
-	public Damage positivePercentDamage;
+	public Dictionary<DamageEnum, float> positivePercentDamage;
 	[TabGroup("-%D")]
-	public Damage negativePercentDamage;
+	public Dictionary<DamageEnum, float> negativePercentDamage;
 
 }

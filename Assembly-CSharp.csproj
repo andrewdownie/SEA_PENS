@@ -59,10 +59,11 @@
      <Compile Include="Assets\Scripts\SEA\BaseAttributes.cs" />
      <Compile Include="Assets\Scripts\SEA\BaseStats.cs" />
      <Compile Include="Assets\Scripts\SEA\CurrentStats.cs" />
-     <Compile Include="Assets\Scripts\SEA\Damage.cs" />
+     <Compile Include="Assets\Scripts\SEA\DamageEnum.cs" />
      <Compile Include="Assets\Scripts\SEA\Effect.cs" />
      <Compile Include="Assets\Scripts\SEA\EffectiveAttributes.cs" />
      <Compile Include="Assets\Scripts\SEA\EffectiveStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\EffectMetaInfo.cs" />
      <Compile Include="Assets\Scripts\SEA\Effects.cs" />
      <Compile Include="Assets\Scripts\SEA\Experience.cs" />
      <Compile Include="Assets\Scripts\SEA\InstantEffects.cs" />
