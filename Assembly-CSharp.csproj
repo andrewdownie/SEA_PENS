@@ -66,8 +66,8 @@
      <Compile Include="Assets\Scripts\SEA\Effects.cs" />
      <Compile Include="Assets\Scripts\SEA\Experience.cs" />
      <Compile Include="Assets\Scripts\SEA\InstantEffects.cs" />
+     <Compile Include="Assets\Scripts\SEA\StatEnum.cs" />
      <Compile Include="Assets\Scripts\SEA\StaticEffects.cs" />
-     <Compile Include="Assets\Scripts\SEA\Stats.cs" />
      <Compile Include="Assets\Scripts\SEA\ToggleEffects.cs" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />

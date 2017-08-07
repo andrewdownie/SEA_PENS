@@ -17,30 +17,33 @@ public class Experience : MonoBehaviour {
 	private float currentExperience;
 	[SerializeField]
 	private int unallocatedAttributePoints;
+	[SerializeField]
+	private int level = 1;
 
 
-	public void LevelUp(){
+	public bool TryLevelUp(){
 		if(currentExperience >= experienceRequired){
 			currentExperience -= experienceRequired;
+			level++;
 			CalcExperienceRequired();
 			unallocatedAttributePoints += 3;
 			//TODO: how will auto allocated points be decided on what they should auto allocate on?
 			//TODO: do I need a class script and a race script for this script to reference?
 			//TODO: maybe the class / race could be passed as parameters to the level up function?
+
+			return true;
 		}
+		return false;
 	}
 
 	public void AddExperience(float amount){
 		currentExperience += amount;
 
-		if(currentExperience >= experienceRequired){
-			//TODO: notifiy the player that they can level up
-		}
+		TryLevelUp();
 	}
 
 
 	private void CalcExperienceRequired(){
-		int level = GetComponent<AllocatedAttributes>().attributes.level;
 		experienceRequired = Mathf.Pow(LEVEL_EXPERIENCE_INCREASE_MULTIPLIER, level);
 	}
 

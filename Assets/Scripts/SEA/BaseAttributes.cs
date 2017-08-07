@@ -7,7 +7,7 @@ public class BaseAttributes : MonoBehaviour {
 	[TabGroup("Attributes")]
 	public Attributes attributes;
 	[SerializeField][TabGroup("References")]
-	ActualStats actualStats;
+	protected ActualStats actualStats;
 
 
 	void OnValidate(){

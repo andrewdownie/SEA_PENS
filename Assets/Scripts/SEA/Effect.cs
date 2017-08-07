@@ -7,26 +7,27 @@ using Sirenix.OdinInspector;
 //NOTE: percents are in the range [0, 1]
 [System.Serializable]
 public class Effect {
-	[TabGroup("+ Atts")]	
+	[TabGroup("+A")]	
 	public Attributes positiveAttribues;
-	[TabGroup("- Atts")]	
+	[TabGroup("-A")]	
 	public Attributes negativeAttribues;
 
-	[TabGroup("+ Stats")]	
-	public Stats positiveStats;
-	[TabGroup("- Stats")]	
-	public Stats negativeStats;
-	[TabGroup("+ %Stats")]	
-	public Stats positivePercentStats;
-	[TabGroup("- %Stats")]	
-	public Stats negativePercentStats;
+	[TabGroup("+S")]	
+	public Dictionary<StatsEnum, float> positiveStats;
+	[TabGroup("-S")]	
+	public Dictionary<StatsEnum, float> negativeStats;
+	[TabGroup("+%S")]	
+	public Dictionary<StatsEnum, float> positivePercentStats;
+	[TabGroup("-%S")]	
+	public Dictionary<StatsEnum, float> negativePercentStats;
 
-	[TabGroup("+ Damage")]
+	[TabGroup("+D")]
 	public Damage positiveDamage;
-	[TabGroup("- Damage")]
+	[TabGroup("-D")]
 	public Damage negativeDamage;
-	[TabGroup("+ %Damage")]
+	[TabGroup("+%D")]
 	public Damage positivePercentDamage;
-	[TabGroup("- %Damage")]
+	[TabGroup("-%D")]
 	public Damage negativePercentDamage;
+
 }

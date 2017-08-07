@@ -39,6 +39,10 @@ public class EffectiveAttributes : BaseAttributes {
 			attributes -= e.negativeAttribues;	
 		}	
 
+
+
+		actualStats.RecalculateActualStats();
+
 	}
 
 

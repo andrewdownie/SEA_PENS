@@ -19,38 +19,41 @@ public class EffectiveStats : BaseStats {
     
     
     public void RecalculateEffectiveStats(){
-       stats = new Stats(actualStats.stats); 
+           
+       stats = BaseStats.CloneStats(actualStats);
 
         //TODO: positive items should be added in the first round, and then negative items should be added (Should negative items use EffectiveStats for calculations instead of ActualStats like positive items do?)
 
+        //TODO: for some reason, effects aren't being applied to effective stats---------------------------
 		foreach(Effect e in staticEffects.effectList){
-            stats = stats + e.positiveStats;
-            stats = stats - e.negativeStats;
-            AddPostivePercentage(actualStats, e.positivePercentStats); 
-            AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.positiveStats);
+                  Subtract(e.negativeStats);
+                  AddPostivePercentage(actualStats, e.positivePercentStats); 
+                  AddNegativePercentage(actualStats, e.negativePercentStats); 
 		}	
 
 
 		foreach(Effect e in toggleEffects.effectList){
-            stats = stats + e.positiveStats;
-            stats = stats - e.negativeStats;
-            AddPostivePercentage(actualStats, e.positivePercentStats); 
-            AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.positiveStats);
+                  Subtract(e.negativeStats);
+                  AddPostivePercentage(actualStats, e.positivePercentStats); 
+                  AddNegativePercentage(actualStats, e.negativePercentStats); 
 		}	
 
 		foreach(Effect e in activeEffects.effectList){
-            stats = stats + e.positiveStats;
-            stats = stats - e.negativeStats;
-            AddPostivePercentage(actualStats, e.positivePercentStats); 
-            AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.positiveStats);
+                  Subtract(e.negativeStats);
+                  AddPostivePercentage(actualStats, e.positivePercentStats); 
+                  AddNegativePercentage(actualStats, e.negativePercentStats); 
 		}	
 
 		foreach(Effect e in instantEffects.effectList){
-            stats = stats + e.positiveStats;
-            stats = stats - e.negativeStats;
-            AddPostivePercentage(actualStats, e.positivePercentStats); 
-            AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.positiveStats);
+                  Subtract(e.negativeStats);
+                  AddPostivePercentage(actualStats, e.positivePercentStats); 
+                  AddNegativePercentage(actualStats, e.negativePercentStats); 
 		}	
+            
     }
 
     void Start(){
@@ -58,25 +61,32 @@ public class EffectiveStats : BaseStats {
     }
 
     void Update(){
-        Debug.Log(stats.movement_speed);
+
     }
 
-	private static Stats CalculatePercentage(ActualStats percentageBase, Stats percentageModifier){
-		Stats newStats = new Stats();	
+	private static Dictionary<StatsEnum, float> CalculatePercentage(ActualStats percentageBase, Dictionary<StatsEnum, float> percentageModifier){
+            Dictionary<StatsEnum, float> dict = new Dictionary<StatsEnum, float>();
 
-		newStats.movement_speed = percentageBase.stats.movement_speed * percentageModifier.movement_speed;
-		newStats.weight_capacity = percentageBase.stats.weight_capacity * percentageModifier.weight_capacity;
+            foreach(KeyValuePair<StatsEnum, float> kvp in dict){
+                 if(percentageBase.ContainsKey(kvp.Key)){
+                        if(percentageModifier.ContainsKey(kvp.Key)){
+                              dict.Add(kvp.Key, percentageBase[kvp.Key] + percentageModifier[kvp.Key]);
+                        }
+                        else{
+                              dict.Add(kvp.Key, percentageBase[kvp.Key] + percentageModifier[kvp.Key]);
+                        }
+                 } 
+            }
 
-
-		return newStats;
+		return dict;
 	}
 
-	public void AddPostivePercentage(ActualStats percentageBase, Stats percentageModifier){
-        stats = stats + CalculatePercentage(percentageBase, percentageModifier);
+	public void AddPostivePercentage(ActualStats percentageBase, Dictionary<StatsEnum, float> percentageModifier){
+        Add(CalculatePercentage(percentageBase, percentageModifier));
 	}
 
-	public void AddNegativePercentage(ActualStats percentageBase, Stats percentageModifier){
-        stats = stats - CalculatePercentage(percentageBase, percentageModifier);
+	public void AddNegativePercentage(ActualStats percentageBase, Dictionary<StatsEnum, float> percentageModifier){
+        Subtract(CalculatePercentage(percentageBase, percentageModifier));
 	}
 
 }

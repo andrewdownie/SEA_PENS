@@ -208,9 +208,9 @@ RectTransform:
   m_Father: {fileID: 1144454903}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 89.400024, y: 344.3}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 89.400024, y: -91}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446261514
@@ -542,8 +542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    strength: 1
-    agility: 26
+    strength: 428
+    agility: 2000
     level: 0
   actualStats: {fileID: 1819255234}
 --- !u!114 &939839814
@@ -558,8 +558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    strength: 1
-    agility: 26
+    strength: 428
+    agility: 2000
     level: 0
   actualStats: {fileID: 1819255234}
   allocatedAttributes: {fileID: 939839815}
@@ -592,8 +592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    strength: 2
-    agility: 26
+    strength: 423
+    agility: 3006.25
     level: 0
   actualStats: {fileID: 1819255234}
   staticEffects: {fileID: 2092627515}
@@ -614,6 +614,7 @@ MonoBehaviour:
   experienceRequired: 0
   currentExperience: 0
   unallocatedAttributePoints: 0
+  level: 1
 --- !u!1 &1144454902
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,9 +886,9 @@ RectTransform:
   m_Father: {fileID: 1144454903}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 249.80008, y: 344.3}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 249.80008, y: -91}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448224496
@@ -1171,9 +1172,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151910d5208a46f4b87f5db5ac288142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats:
-    movement_speed: 200
-    weight_capacity: 34
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: stats
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[StatsEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 10003.85
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 4198.25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actualStats: {fileID: 1819255234}
   instantEffects: {fileID: 2092627516}
   activeEffects: {fileID: 2092627517}
@@ -1190,11 +1234,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac885cc32dd5d3c4d917f5c3a795cab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats:
-    movement_speed: 100
-    weight_capacity: 34
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: stats
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[StatsEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 9503.85
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 4698.25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   baseStats: {fileID: 1819255235}
   effectiveAttributes: {fileID: 939839816}
+  effectiveStats: {fileID: 1819255233}
 --- !u!114 &1819255235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,9 +1294,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333b6f439b81a8342b48bebf142ee2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats:
-    movement_speed: 20
-    weight_capacity: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: stats
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[StatsEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 62.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!114 &1819255236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,9 +1351,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bcef107c85db54f91767abde498df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats:
-    movement_speed: 0
-    weight_capacity: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: stats
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[StatsEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &1947349283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectList: []
+  effectiveAtts: {fileID: 939839816}
 --- !u!114 &2092627515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,25 +1462,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectList:
   - positiveAttribues:
-      strength: 1
-      agility: 0
+      strength: 0
+      agility: 1006.25
       level: 0
     negativeAttribues:
-      strength: 0
+      strength: 5
       agility: 0
       level: 0
-    positiveStats:
-      movement_speed: 0
-      weight_capacity: 0
-    negativeStats:
-      movement_speed: 0
-      weight_capacity: 0
-    positivePercentStats:
-      movement_speed: 1
-      weight_capacity: 0
-    negativePercentStats:
-      movement_speed: 0
-      weight_capacity: 0
+    positiveDamage:
+      sharpDamage: 0
+      fireDamage: 0
+      iceDamage: 0
+      poisonDamage: 0
+      arcaneDamage: 0
+    negativeDamage:
+      sharpDamage: 0
+      fireDamage: 0
+      iceDamage: 0
+      poisonDamage: 0
+      arcaneDamage: 0
+    positivePercentDamage:
+      sharpDamage: 0
+      fireDamage: 0
+      iceDamage: 0
+      poisonDamage: 0
+      arcaneDamage: 0
+    negativePercentDamage:
+      sharpDamage: 0
+      fireDamage: 0
+      iceDamage: 0
+      poisonDamage: 0
+      arcaneDamage: 0
+  effectiveAtts: {fileID: 939839816}
 --- !u!114 &2092627516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,6 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectList: []
+  effectiveAtts: {fileID: 939839816}
 --- !u!114 &2092627517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1354,3 +1519,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectList: []
+  effectiveAtts: {fileID: 939839816}
