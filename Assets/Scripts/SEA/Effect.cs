@@ -11,6 +11,7 @@ public class Effect {
 	public Attributes positiveAttribues;
 	[TabGroup("- Atts")]	
 	public Attributes negativeAttribues;
+
 	[TabGroup("+ Stats")]	
 	public Stats positiveStats;
 	[TabGroup("- Stats")]	
@@ -19,4 +20,13 @@ public class Effect {
 	public Stats positivePercentStats;
 	[TabGroup("- %Stats")]	
 	public Stats negativePercentStats;
+
+	[TabGroup("+ Damage")]
+	public Damage positiveDamage;
+	[TabGroup("- Damage")]
+	public Damage negativeDamage;
+	[TabGroup("+ %Damage")]
+	public Damage positivePercentDamage;
+	[TabGroup("- %Damage")]
+	public Damage negativePercentDamage;
 }

@@ -505,6 +505,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 939839812}
+  - component: {fileID: 939839817}
   - component: {fileID: 939839813}
   - component: {fileID: 939839815}
   - component: {fileID: 939839814}
@@ -541,9 +542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    level: 1
     strength: 1
     agility: 26
+    level: 0
   actualStats: {fileID: 1819255234}
 --- !u!114 &939839814
 MonoBehaviour:
@@ -557,9 +558,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    level: 1
     strength: 1
     agility: 26
+    level: 0
   actualStats: {fileID: 1819255234}
   allocatedAttributes: {fileID: 939839815}
   baseAttributes: {fileID: 939839813}
@@ -575,9 +576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    level: 0
     strength: 0
     agility: 0
+    level: 0
   actualStats: {fileID: 1819255234}
 --- !u!114 &939839816
 MonoBehaviour:
@@ -591,14 +592,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    level: 1
     strength: 2
     agility: 26
+    level: 0
   actualStats: {fileID: 1819255234}
   staticEffects: {fileID: 2092627515}
   activeEffects: {fileID: 2092627517}
   instantEffects: {fileID: 2092627516}
   toggleEffects: {fileID: 2092627514}
+--- !u!114 &939839817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939839811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e535a8a56caf4104280219d652453ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceRequired: 0
+  currentExperience: 0
+  unallocatedAttributePoints: 0
 --- !u!1 &1144454902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1139,7 @@ GameObject:
   - component: {fileID: 1819255235}
   - component: {fileID: 1819255234}
   - component: {fileID: 1819255233}
+  - component: {fileID: 1819255236}
   m_Layer: 0
   m_Name: Stats
   m_TagString: Untagged
@@ -1156,7 +1172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    movement_speed: 300
+    movement_speed: 200
     weight_capacity: 34
   actualStats: {fileID: 1819255234}
   instantEffects: {fileID: 2092627516}
@@ -1192,6 +1208,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
     movement_speed: 20
+    weight_capacity: 0
+--- !u!114 &1819255236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819255231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bcef107c85db54f91767abde498df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    movement_speed: 0
     weight_capacity: 0
 --- !u!1 &1947349283
 GameObject:
@@ -1281,13 +1311,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectList:
   - positiveAttribues:
-      level: 0
       strength: 1
       agility: 0
-    negativeAttribues:
       level: 0
+    negativeAttribues:
       strength: 0
       agility: 0
+      level: 0
     positiveStats:
       movement_speed: 0
       weight_capacity: 0

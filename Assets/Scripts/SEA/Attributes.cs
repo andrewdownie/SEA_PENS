@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Attributes {
 	
-	public float level, strength, agility;
+	public float strength, agility;
+	public int level;
 
 
 	public Attributes (Attributes toCopy){

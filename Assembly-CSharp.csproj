@@ -58,10 +58,13 @@
      <Compile Include="Assets\Scripts\SEA\Attributes.cs" />
      <Compile Include="Assets\Scripts\SEA\BaseAttributes.cs" />
      <Compile Include="Assets\Scripts\SEA\BaseStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\CurrentStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\Damage.cs" />
      <Compile Include="Assets\Scripts\SEA\Effect.cs" />
      <Compile Include="Assets\Scripts\SEA\EffectiveAttributes.cs" />
      <Compile Include="Assets\Scripts\SEA\EffectiveStats.cs" />
      <Compile Include="Assets\Scripts\SEA\Effects.cs" />
+     <Compile Include="Assets\Scripts\SEA\Experience.cs" />
      <Compile Include="Assets\Scripts\SEA\InstantEffects.cs" />
      <Compile Include="Assets\Scripts\SEA\StaticEffects.cs" />
      <Compile Include="Assets\Scripts\SEA\Stats.cs" />
@@ -96,22 +99,22 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Editor">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization.Config">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
