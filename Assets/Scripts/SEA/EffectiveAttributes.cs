@@ -20,23 +20,26 @@ public class EffectiveAttributes : BaseAttributes {
 	public void RecalculateEffectiveAttributes(){
 
 
-		attributes = new Attributes(GetComponent<ActualAttributes>().attributes);
+		attributes = CloneDict(GetComponent<ActualAttributes>());
 		
 		foreach(Effect e in staticEffects.effectList){
-			attributes += e.positiveAttribues;
-			attributes -= e.negativeAttribues;	
+			Add(e.GetAttributesOfModifier(EffectModifierEnum.positive));
+			Subtract(e.GetAttributesOfModifier(EffectModifierEnum.negative));
 		}	
+
 		foreach(Effect e in toggleEffects.effectList){
-			attributes += e.positiveAttribues;
-			attributes -= e.negativeAttribues;	
+			Add(e.GetAttributesOfModifier(EffectModifierEnum.positive));
+			Subtract(e.GetAttributesOfModifier(EffectModifierEnum.negative));
 		}	
+
 		foreach(Effect e in activeEffects.effectList){
-			attributes += e.positiveAttribues;
-			attributes -= e.negativeAttribues;	
+			Add(e.GetAttributesOfModifier(EffectModifierEnum.positive));
+			Subtract(e.GetAttributesOfModifier(EffectModifierEnum.negative));
 		}	
+
 		foreach(Effect e in instantEffects.effectList){
-			attributes += e.positiveAttribues;
-			attributes -= e.negativeAttribues;	
+			Add(e.GetAttributesOfModifier(EffectModifierEnum.positive));
+			Subtract(e.GetAttributesOfModifier(EffectModifierEnum.negative));
 		}	
 
 

@@ -541,10 +541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4ff7f9a6b774941985a636e9207322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes:
-    strength: 428
-    agility: 2000
-    level: 0
   actualStats: {fileID: 1819255234}
 --- !u!114 &939839814
 MonoBehaviour:
@@ -557,10 +553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c762882d5fe498b4a9c1e95ad8a4af59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes:
-    strength: 428
-    agility: 2000
-    level: 0
   actualStats: {fileID: 1819255234}
   allocatedAttributes: {fileID: 939839815}
   baseAttributes: {fileID: 939839813}
@@ -575,10 +567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226dce06ddd2764e9b5a8a201ab97de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes:
-    strength: 0
-    agility: 0
-    level: 0
   actualStats: {fileID: 1819255234}
 --- !u!114 &939839816
 MonoBehaviour:
@@ -591,10 +579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5262c9d1f4e68d44088a99d6b5c1da89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes:
-    strength: 428
-    agility: 2000
-    level: 0
   actualStats: {fileID: 1819255234}
   staticEffects: {fileID: 2092627515}
   activeEffects: {fileID: 2092627517}
@@ -1196,7 +1180,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 6545.1
+      Data: 20
     - Name: 
       Entry: 8
       Data: 
@@ -1208,7 +1192,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 3712
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -1258,7 +1242,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 6490.1
+      Data: 20
     - Name: 
       Entry: 8
       Data: 
@@ -1270,7 +1254,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 3712
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -1318,7 +1302,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 62.1
+      Data: 20
     - Name: 
       Entry: 8
       Data: 
@@ -1511,37 +1495,54 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: positiveAttribues
+    - Name: stats
       Entry: 7
-      Data: 3|Attributes, Assembly-CSharp
-    - Name: strength
-      Entry: 4
-      Data: 0
-    - Name: agility
-      Entry: 4
-      Data: 0
-    - Name: level
+      Data: 3|System.Collections.Generic.Dictionary`2[[EffectModifierEnum, Assembly-CSharp],[System.Collections.Generic.Dictionary`2[[StatsEnum,
+        Assembly-CSharp],[System.Single, mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
       Entry: 3
       Data: 0
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: negativeAttribues
       Entry: 7
-      Data: 4|Attributes, Assembly-CSharp
-    - Name: strength
-      Entry: 4
-      Data: 0
-    - Name: agility
-      Entry: 4
-      Data: 0
-    - Name: level
+      Data: 4|System.Collections.Generic.Dictionary`2[[StatsEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
       Entry: 3
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
-    - Name: positiveStats
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
       Entry: 7
       Data: 5|System.Collections.Generic.Dictionary`2[[StatsEnum, Assembly-CSharp],[System.Single,
         mscorlib]], mscorlib
@@ -1556,7 +1557,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 55
+      Data: 0.5
     - Name: 
       Entry: 8
       Data: 
@@ -1566,26 +1567,27 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: negativeStats
-      Entry: 6
+    - Name: 
+      Entry: 8
       Data: 
-    - Name: positivePercentStats
-      Entry: 6
+    - Name: 
+      Entry: 13
       Data: 
-    - Name: negativePercentStats
-      Entry: 6
+    - Name: 
+      Entry: 8
       Data: 
-    - Name: positiveDamage
-      Entry: 6
+    - Name: damage
+      Entry: 7
+      Data: 6|System.Collections.Generic.Dictionary`2[[EffectModifierEnum, Assembly-CSharp],[System.Collections.Generic.Dictionary`2[[DamageEnum,
+        Assembly-CSharp],[System.Single, mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
       Data: 
-    - Name: negativeDamage
-      Entry: 6
-      Data: 
-    - Name: positivePercentDamage
-      Entry: 6
-      Data: 
-    - Name: negativePercentDamage
-      Entry: 6
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -1600,14 +1602,6 @@ MonoBehaviour:
   - metaInfo:
       sourceEnumLul: 55
       sourceNameEnumLul: 
-    positiveAttribues:
-      strength: 0
-      agility: 0
-      level: 0
-    negativeAttribues:
-      strength: 0
-      agility: 0
-      level: 0
   effectiveAtts: {fileID: 939839816}
 --- !u!114 &2092627516
 MonoBehaviour:

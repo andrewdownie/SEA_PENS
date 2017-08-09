@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class Attributes {
-	
+/*	
 	public float strength, agility;
 	public int level;
 
@@ -40,5 +40,5 @@ public class Attributes {
 		return newAtt;	
 	}
 
-
+*/
 }

@@ -65,7 +65,7 @@ public class BaseStats : SerializedMonoBehaviour {
 		}	
 	}
 
-	public static Dictionary<StatsEnum, float> CloneStats(BaseStats statsToClone){
+	public static Dictionary<StatsEnum, float> Clone(BaseStats statsToClone){
 		Dictionary<StatsEnum, float> dict = new Dictionary<StatsEnum, float>();
 
 		foreach(StatsEnum se in statsToClone.DictKeys){

@@ -10,27 +10,49 @@ using Sirenix.Serialization;
 public class Effect {
 	[TabGroup("M")]
 	public EffectMetaInfo metaInfo;
-	[TabGroup("+A")]	
-	public Attributes positiveAttribues;
-	[TabGroup("-A")]	
-	public Attributes negativeAttribues;
 
-	[OdinSerialize][TabGroup("+S")]	
-	public Dictionary<StatsEnum, float> positiveStats;
-	[TabGroup("-S")]	
-	public Dictionary<StatsEnum, float> negativeStats;
-	[TabGroup("+%S")]	
-	public Dictionary<StatsEnum, float> positivePercentStats;
-	[TabGroup("-%S")]	
-	public Dictionary<StatsEnum, float> negativePercentStats;
+	[TabGroup("A")]
+	Dictionary<EffectModifierEnum, Dictionary<AttributesEnum, float>> attributes;
+	[TabGroup("S")]
+	public Dictionary<EffectModifierEnum, Dictionary<StatsEnum, float>> stats;
+	[TabGroup("D")]
+	public Dictionary<EffectModifierEnum, Dictionary<DamageEnum, float>> damage;
 
-	[TabGroup("+D")]
-	public Dictionary<DamageEnum, float> positiveDamage;
-	[TabGroup("-D")]
-	public Dictionary<DamageEnum, float> negativeDamage;
-	[TabGroup("+%D")]
-	public Dictionary<DamageEnum, float> positivePercentDamage;
-	[TabGroup("-%D")]
-	public Dictionary<DamageEnum, float> negativePercentDamage;
 
+	public Dictionary<AttributesEnum, float> GetAttributesOfModifier(EffectModifierEnum modifierEnum){
+		if(attributes != null && attributes.ContainsKey(modifierEnum)){
+			return attributes[modifierEnum];
+		}
+
+		return new Dictionary<AttributesEnum, float>();
+	}
+
+
+	public Dictionary<StatsEnum, float> GetStatsOfModifier(EffectModifierEnum modifierEnum){
+
+		if(stats != null && stats.ContainsKey(modifierEnum)){
+			return stats[modifierEnum];
+		}
+
+		return new Dictionary<StatsEnum, float>();
+	}
+
+
+
+}
+
+
+public enum EffectModifierEnum{
+	positive,
+	negative,
+	positivePercent,
+	negativePercent,
+}
+
+
+public enum EffectPieceEnum{
+	meta,
+	attributes,
+	stats,
+	damage
 }

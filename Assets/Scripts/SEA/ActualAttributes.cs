@@ -16,7 +16,8 @@ public class ActualAttributes : BaseAttributes {
 
 
 	public void RecalculateActualAttributes(){
-		attributes = allocatedAttributes.attributes + baseAttributes.attributes;
+		attributes = CloneDict(allocatedAttributes);
+		Add(baseAttributes);
 	}
 
 

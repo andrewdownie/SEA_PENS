@@ -14,8 +14,8 @@ public class ActualStats : BaseStats {
 
 
 	public void RecalculateActualStats(){
-		this[StatsEnum.movement_speed] = baseStats[StatsEnum.movement_speed] + effectiveAttributes.attributes.agility * 3f + effectiveAttributes.attributes.strength;	
-		this[StatsEnum.weight_capacity] = baseStats[StatsEnum.weight_capacity] + effectiveAttributes.attributes.agility + effectiveAttributes.attributes.strength * 4f;
+		this[StatsEnum.movement_speed] = baseStats[StatsEnum.movement_speed] + effectiveAttributes[AttributesEnum.agility] * 3f + effectiveAttributes[AttributesEnum.strength];	
+		this[StatsEnum.weight_capacity] = baseStats[StatsEnum.weight_capacity] + effectiveAttributes[AttributesEnum.agility] + effectiveAttributes[AttributesEnum.strength] * 4f;
 
 
 		effectiveStats.RecalculateEffectiveStats();	

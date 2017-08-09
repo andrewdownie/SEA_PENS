@@ -20,40 +20,40 @@ public class EffectiveStats : BaseStats {
     
     public void RecalculateEffectiveStats(){
            
-       stats = BaseStats.CloneStats(actualStats);
+       stats = BaseStats.Clone(actualStats);
 
         //TODO: positive items should be added in the first round, and then negative items should be added (Should negative items use EffectiveStats for calculations instead of ActualStats like positive items do?)
 
-        //TODO: for some reason, effects aren't being applied to effective stats---------------------------
+        //TODO: for some reason, percentage modifiers aren't being added to effective stats---------------------------
 		foreach(Effect e in staticEffects.effectList){
-                  Add(e.positiveStats);
-                  Subtract(e.negativeStats);
-                  AddPostivePercentage(actualStats, e.positivePercentStats); 
-                  AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.GetStatsOfModifier(EffectModifierEnum.positive));
+                  Subtract(e.GetStatsOfModifier(EffectModifierEnum.negative));
+                  AddPostivePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.positivePercent)); 
+                  AddNegativePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.negativePercent)); 
 		}	
 
 
 		foreach(Effect e in toggleEffects.effectList){
-                  Add(e.positiveStats);
-                  Subtract(e.negativeStats);
-                  AddPostivePercentage(actualStats, e.positivePercentStats); 
-                  AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.GetStatsOfModifier(EffectModifierEnum.positive));
+                  Subtract(e.GetStatsOfModifier(EffectModifierEnum.negative));
+                  AddPostivePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.positivePercent)); 
+                  AddNegativePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.negativePercent)); 
 		}	
 
 		foreach(Effect e in activeEffects.effectList){
-                  Add(e.positiveStats);
-                  Subtract(e.negativeStats);
-                  AddPostivePercentage(actualStats, e.positivePercentStats); 
-                  AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.GetStatsOfModifier(EffectModifierEnum.positive));
+                  Subtract(e.GetStatsOfModifier(EffectModifierEnum.negative));
+                  AddPostivePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.positivePercent)); 
+                  AddNegativePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.negativePercent)); 
 		}	
 
 		foreach(Effect e in instantEffects.effectList){
-                  Add(e.positiveStats);
-                  Subtract(e.negativeStats);
-                  AddPostivePercentage(actualStats, e.positivePercentStats); 
-                  AddNegativePercentage(actualStats, e.negativePercentStats); 
+                  Add(e.GetStatsOfModifier(EffectModifierEnum.positive));
+                  Subtract(e.GetStatsOfModifier(EffectModifierEnum.negative));
+                  AddPostivePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.positivePercent)); 
+                  AddNegativePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.negativePercent)); 
 		}	
-            
+          
     }
 
     void Start(){
@@ -64,16 +64,16 @@ public class EffectiveStats : BaseStats {
 
     }
 
-	private static Dictionary<StatsEnum, float> CalculatePercentage(ActualStats percentageBase, Dictionary<StatsEnum, float> percentageModifier){
+	private static Dictionary<StatsEnum, float> CalculatePercentage(ActualStats baseAmount, Dictionary<StatsEnum, float> percentageModifier01){
             Dictionary<StatsEnum, float> dict = new Dictionary<StatsEnum, float>();
 
             foreach(KeyValuePair<StatsEnum, float> kvp in dict){
-                 if(percentageBase.ContainsKey(kvp.Key)){
-                        if(percentageModifier.ContainsKey(kvp.Key)){
-                              dict.Add(kvp.Key, percentageBase[kvp.Key] + percentageModifier[kvp.Key]);
+                 if(baseAmount.ContainsKey(kvp.Key)){
+                        if(percentageModifier01.ContainsKey(kvp.Key)){
+                              dict[kvp.Key] = baseAmount[kvp.Key] + percentageModifier01[kvp.Key];
                         }
                         else{
-                              dict.Add(kvp.Key, percentageBase[kvp.Key] + percentageModifier[kvp.Key]);
+                              dict.Add(kvp.Key, baseAmount[kvp.Key] + percentageModifier01[kvp.Key]);
                         }
                  } 
             }
