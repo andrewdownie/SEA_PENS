@@ -9,8 +9,14 @@ public class EffectMetaInfo {
 
 	EffectIDEnum effectID;
 
-	//TODO: what exactly does this variable need to hold?
-	//		info that would uniquely identify this effect instance to prevent stacking
+
+	public string CastorID{
+		get{return castorID;}
+	}
+
+	public EffectIDEnum EffectID{
+		get{return effectID;}
+	}
 }
 
 

@@ -541,6 +541,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4ff7f9a6b774941985a636e9207322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: attributes
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[AttributesEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 55
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actualStats: {fileID: 1819255234}
 --- !u!114 &939839814
 MonoBehaviour:
@@ -553,6 +587,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c762882d5fe498b4a9c1e95ad8a4af59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: attributes
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[AttributesEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 88
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 33
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actualStats: {fileID: 1819255234}
   allocatedAttributes: {fileID: 939839815}
   baseAttributes: {fileID: 939839813}
@@ -567,6 +647,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226dce06ddd2764e9b5a8a201ab97de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: attributes
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[AttributesEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 33
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 33
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actualStats: {fileID: 1819255234}
 --- !u!114 &939839816
 MonoBehaviour:
@@ -579,6 +705,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5262c9d1f4e68d44088a99d6b5c1da89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: attributes
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[AttributesEnum, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 88
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 33
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   actualStats: {fileID: 1819255234}
   staticEffects: {fileID: 2092627515}
   activeEffects: {fileID: 2092627517}
@@ -595,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e535a8a56caf4104280219d652453ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  experienceRequired: 0
+  experienceRequired: 0.36
   currentExperience: 0
   unallocatedAttributePoints: 0
   level: 1
@@ -616,7 +788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1144454903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1180,7 +1352,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 20
+      Data: 207
     - Name: 
       Entry: 8
       Data: 
@@ -1192,7 +1364,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 5
+      Data: 390
     - Name: 
       Entry: 8
       Data: 
@@ -1242,7 +1414,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 20
+      Data: 207
     - Name: 
       Entry: 8
       Data: 
@@ -1254,7 +1426,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0
+      Data: 390
     - Name: 
       Entry: 8
       Data: 
@@ -1314,7 +1486,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -1486,11 +1658,8 @@ MonoBehaviour:
     - Name: metaInfo
       Entry: 7
       Data: 2|EffectMetaInfo, Assembly-CSharp
-    - Name: sourceEnumLul
-      Entry: 1
-      Data: 55
-    - Name: sourceNameEnumLul
-      Entry: 1
+    - Name: castorID
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -1600,8 +1769,7 @@ MonoBehaviour:
       Data: 
   effectList:
   - metaInfo:
-      sourceEnumLul: 55
-      sourceNameEnumLul: 
+      castorID: 
   effectiveAtts: {fileID: 939839816}
 --- !u!114 &2092627516
 MonoBehaviour:

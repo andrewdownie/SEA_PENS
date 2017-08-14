@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class BaseAttributes : MonoBehaviour {
+public class BaseAttributes : SerializedMonoBehaviour {
 	[SerializeField][TabGroup("Attributes")]
 	protected Dictionary<AttributesEnum, float> attributes;
 	[SerializeField][TabGroup("References")]

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using System;
 
 public class EffectiveStats : BaseStats {
 
@@ -22,10 +23,13 @@ public class EffectiveStats : BaseStats {
            
        stats = BaseStats.Clone(actualStats);
 
+       // These are the actual effects that get applied to the player... the way I plan it now they will not show up in the inspector
+       List<Effect> appliedEffects = new List<Effect>();
+
         //TODO: positive items should be added in the first round, and then negative items should be added (Should negative items use EffectiveStats for calculations instead of ActualStats like positive items do?)
 
         //TODO: for some reason, percentage modifiers aren't being added to effective stats---------------------------
-		foreach(Effect e in staticEffects.effectList){
+		/*foreach(Effect e in staticEffects.effectList){
                   Add(e.GetStatsOfModifier(EffectModifierEnum.positive));
                   Subtract(e.GetStatsOfModifier(EffectModifierEnum.negative));
                   AddPostivePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.positivePercent)); 
@@ -52,9 +56,11 @@ public class EffectiveStats : BaseStats {
                   Subtract(e.GetStatsOfModifier(EffectModifierEnum.negative));
                   AddPostivePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.positivePercent)); 
                   AddNegativePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.negativePercent)); 
-		}	
+		}	*/
+
           
     }
+
 
     void Start(){
         RecalculateEffectiveStats();
