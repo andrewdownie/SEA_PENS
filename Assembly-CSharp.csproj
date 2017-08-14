@@ -51,26 +51,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\SEA\ActiveEffects.cs" />
-     <Compile Include="Assets\Scripts\SEA\ActualAttributes.cs" />
-     <Compile Include="Assets\Scripts\SEA\ActualStats.cs" />
-     <Compile Include="Assets\Scripts\SEA\AllocatedAttributes.cs" />
-     <Compile Include="Assets\Scripts\SEA\Attributes.cs" />
-     <Compile Include="Assets\Scripts\SEA\AttributesEnum.cs" />
-     <Compile Include="Assets\Scripts\SEA\BaseAttributes.cs" />
-     <Compile Include="Assets\Scripts\SEA\BaseStats.cs" />
-     <Compile Include="Assets\Scripts\SEA\CurrentStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\Attribute\ActualAttributes.cs" />
+     <Compile Include="Assets\Scripts\SEA\Attribute\AllocatedAttributes.cs" />
+     <Compile Include="Assets\Scripts\SEA\Attribute\Attributes.cs" />
+     <Compile Include="Assets\Scripts\SEA\Attribute\AttributesEnum.cs" />
+     <Compile Include="Assets\Scripts\SEA\Attribute\BaseAttributes.cs" />
+     <Compile Include="Assets\Scripts\SEA\Attribute\EffectiveAttributes.cs" />
      <Compile Include="Assets\Scripts\SEA\DamageEnum.cs" />
-     <Compile Include="Assets\Scripts\SEA\Effect.cs" />
-     <Compile Include="Assets\Scripts\SEA\EffectiveAttributes.cs" />
-     <Compile Include="Assets\Scripts\SEA\EffectiveStats.cs" />
-     <Compile Include="Assets\Scripts\SEA\EffectMetaInfo.cs" />
-     <Compile Include="Assets\Scripts\SEA\Effects.cs" />
+     <Compile Include="Assets\Scripts\SEA\Effect\ActiveEffects.cs" />
+     <Compile Include="Assets\Scripts\SEA\Effect\Effect.cs" />
+     <Compile Include="Assets\Scripts\SEA\Effect\EffectMetaInfo.cs" />
+     <Compile Include="Assets\Scripts\SEA\Effect\Effects.cs" />
+     <Compile Include="Assets\Scripts\SEA\Effect\InstantEffects.cs" />
+     <Compile Include="Assets\Scripts\SEA\Effect\StaticEffects.cs" />
+     <Compile Include="Assets\Scripts\SEA\Effect\ToggleEffects.cs" />
      <Compile Include="Assets\Scripts\SEA\Experience.cs" />
-     <Compile Include="Assets\Scripts\SEA\InstantEffects.cs" />
-     <Compile Include="Assets\Scripts\SEA\StatEnum.cs" />
-     <Compile Include="Assets\Scripts\SEA\StaticEffects.cs" />
-     <Compile Include="Assets\Scripts\SEA\ToggleEffects.cs" />
+     <Compile Include="Assets\Scripts\SEA\Stat\ActualStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\Stat\BaseStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\Stat\CurrentStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\Stat\EffectiveStats.cs" />
+     <Compile Include="Assets\Scripts\SEA\Stat\StatEnum.cs" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
@@ -101,22 +101,22 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Editor">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization.Config">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
- <HintPath>C:/Users/comma/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+ <HintPath>C:/Users/drew/OneDrive/Development/Unity Projects/SEA_PENS/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
