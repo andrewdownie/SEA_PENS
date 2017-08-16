@@ -17,14 +17,19 @@ public class EffectiveStats : BaseStats {
     ToggleEffects toggleEffects;
     [SerializeField][TabGroup("References")]
     StaticEffects staticEffects;
+
+
+    //TODO: this is for testing
+    [SerializeField][TabGroup("Resolved Effects")]
+    List<Effect> displayResolvedEffects;
     
     
     public void RecalculateEffectiveStats(){
+        Debug.Log("Recalculate Effective Stats");
            
        stats = BaseStats.Clone(actualStats);
 
-       // These are the actual effects that get applied to the player... the way I plan it now they will not show up in the inspector
-       List<Effect> appliedEffects = new List<Effect>();
+
 
         //TODO: positive items should be added in the first round, and then negative items should be added (Should negative items use EffectiveStats for calculations instead of ActualStats like positive items do?)
 
@@ -58,7 +63,44 @@ public class EffectiveStats : BaseStats {
                   AddNegativePercentage(actualStats, e.GetStatsOfModifier(EffectModifierEnum.negativePercent)); 
 		}	*/
 
+
+        //SOFAR: each type and modifier is gone through
+       List<Effect> resolvedEffects = new List<Effect>();//maybe a seperate list for each effect type, that way stats first, then damage?
+
+        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
+//            Debug.Log("inner most loop");
+            resolvedEffects.AddRange(Effect.StackResolveEffects(staticEffects.effectList, eme));
+        }
+        //TODO: how to view resolved effects easily in unity?
+        displayResolvedEffects = resolvedEffects;
+        ApplyEffectiveStats(resolvedEffects);
+
+
+
+        return;// //////////////////////////////////////////////////////////////////////////////////////
+
+
+       resolvedEffects = new List<Effect>();
+        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
+            resolvedEffects.AddRange(Effect.StackResolveEffects(toggleEffects.effectList, eme));
+        }
+        //TODO: need to actually apply the effects after each group, how?
+
+
+       resolvedEffects = new List<Effect>();
+        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
+            resolvedEffects.AddRange(Effect.StackResolveEffects(activeEffects.effectList, eme));
+        }
+        //TODO: need to actually apply the effects after each group, how?
+
+
+       resolvedEffects = new List<Effect>();
+        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
+            resolvedEffects.AddRange(Effect.StackResolveEffects(instantEffects.effectList, eme));
+        }
+        //TODO: need to actually apply the effects after each group, how?
           
+
     }
 
 
@@ -68,6 +110,16 @@ public class EffectiveStats : BaseStats {
 
     void Update(){
 
+    }
+
+    void ApplyEffectiveStats(List<Effect> appliedEffects){
+        //what the fuck needs to happen here
+        //  go through damage, "apply" it
+        //  go through stats, "apply" them
+
+        // /////////////////////////////////////////////////////////////////////// how tho
+        // would damage apply to current stats? ... yes
+        //  so that would mean that I need a ref to current stats... oh boi
     }
 
 	private static Dictionary<StatsEnum, float> CalculatePercentage(ActualStats baseAmount, Dictionary<StatsEnum, float> percentageModifier01){
