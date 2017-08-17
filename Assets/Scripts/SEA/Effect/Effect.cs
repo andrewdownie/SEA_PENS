@@ -20,7 +20,9 @@ public class Effect {
 	public Dictionary<EffectModifierEnum, Dictionary<DamageEnum, float>> damage;
 
 
-	public Effect(){
+	public Effect(EffectMetaInfo emi){
+		metaInfo = emi;
+
 		//NOTE: the only time the constructor is used, is during stack resolution, otherwise unity handles it through the inspector
 		//TODO: create meta info... how? => since this constructor is used for a particular character, and for resovling effects, this is what the meta info should reflect
 		attributes = new Dictionary<EffectModifierEnum, Dictionary<AttributesEnum, float>>();
@@ -35,6 +37,10 @@ public class Effect {
 		}
 
 	}
+	public Effect(){
+
+	}
+
 
 
 	public Dictionary<AttributesEnum, float> GetAttributesOfModifier(EffectModifierEnum modifierEnum){
@@ -44,6 +50,7 @@ public class Effect {
 
 		return new Dictionary<AttributesEnum, float>();
 	}
+
 
 
 	public Dictionary<StatsEnum, float> GetStatsOfModifier(EffectModifierEnum modifierEnum){
@@ -56,9 +63,10 @@ public class Effect {
 	}
 
 
+
 	//_Stack resolves effects for a single effect type and effect modifier combo
 	//	four effect-types and four effect-modifiers, for 16 combos that this function will need to be called for... 
-	public static List<Effect> StackResolveEffects(List<Effect> effectList, EffectModifierEnum effectModifier){
+	public static List<Effect> StackResolveEffects(List<Effect> effectList){
 		Debug.Log("Stack Resolve Effects");
 		if(effectList == null){
 			Debug.Log("effect list was null");
@@ -70,19 +78,27 @@ public class Effect {
         foreach(EffectIDEnum effectID in Enum.GetValues(typeof(EffectIDEnum))){
             List<Effect> sub = EffectsOfID(effectList, effectID);
 
-            Effect appliedEffect = new Effect();
+			if(sub.Count == 0){
+				continue;
+			}
 
-            foreach(Effect e in sub){
-				Debug.Log("stack resolve effects inner loop");
-				//appliedEffect = StackResolveDamage(appliedEffect, e, effectModifier);
-				appliedEffect = StackResolveStats(appliedEffect, e, effectModifier);
-            }
+            Effect resolvedEffect = new Effect(new EffectMetaInfo("RESOLVE ALGO, source EffectID: " + effectID, EffectIDEnum.RESOLVE_EFFECT));
 
-            resolvedEffects.Add(appliedEffect);
+        	foreach(EffectModifierEnum effectModifier in Enum.GetValues(typeof(EffectModifierEnum))){
+            	foreach(Effect e in sub){
+					Debug.Log("stack resolve effects inner loop");
+					//appliedEffect = StackResolveDamage(appliedEffect, e, effectModifier);
+					resolvedEffect = StackResolveStats(resolvedEffect, e, effectModifier);
+            	}
+			}
+
+            resolvedEffects.Add(resolvedEffect);
         }
 
 		return resolvedEffects;
 	}
+
+
 
     private static List<Effect> EffectsOfID(List<Effect> parentList, EffectIDEnum effectID){
         List<Effect> subList = new List<Effect>();
@@ -95,6 +111,8 @@ public class Effect {
 
         return subList;
     }
+
+
 
 	private static Effect StackResolveDamage(Effect effectToAddTo, Effect effectToAddFrom, EffectModifierEnum effectModifier){
 		if(effectToAddTo.damage.ContainsKey(effectModifier) == false){
@@ -115,9 +133,11 @@ public class Effect {
 		return effectToAddTo;
 	}
 
+
+
 	private static Effect StackResolveStats(Effect effectToApplyMaxTo, Effect effectToAddFrom, EffectModifierEnum effectModifier){//TODO: the actual list of stats needs to be passed in as well...
-		Debug.Log("StackResolveStats");
-		if(effectToAddFrom.damage.ContainsKey(effectModifier) == false){
+		Debug.Log("StackResolveStats, effect modifier is: " + effectModifier);
+		if(effectToAddFrom.stats.ContainsKey(effectModifier) == false){
 			return effectToApplyMaxTo;
 		}
 
@@ -146,12 +166,14 @@ public class Effect {
 }
 
 
+
 public enum EffectModifierEnum{
 	positive,
 	negative,
-	positivePercent,
-	negativePercent,
+	positivePercent01,
+	negativePercent01,
 }
+
 
 
 public enum EffectPieceEnum{

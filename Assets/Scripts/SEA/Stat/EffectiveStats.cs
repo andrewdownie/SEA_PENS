@@ -67,10 +67,9 @@ public class EffectiveStats : BaseStats {
         //SOFAR: each type and modifier is gone through
        List<Effect> resolvedEffects = new List<Effect>();//maybe a seperate list for each effect type, that way stats first, then damage?
 
-        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
 //            Debug.Log("inner most loop");
-            resolvedEffects.AddRange(Effect.StackResolveEffects(staticEffects.effectList, eme));
-        }
+        resolvedEffects.AddRange(Effect.StackResolveEffects(staticEffects.effectList));
+        //Debug.Log("current count is: " + resolvedEffects.Count);
         //TODO: how to view resolved effects easily in unity?
         displayResolvedEffects = resolvedEffects;
         ApplyEffectiveStats(resolvedEffects);
@@ -80,24 +79,18 @@ public class EffectiveStats : BaseStats {
         return;// //////////////////////////////////////////////////////////////////////////////////////
 
 
-       resolvedEffects = new List<Effect>();
-        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
-            resolvedEffects.AddRange(Effect.StackResolveEffects(toggleEffects.effectList, eme));
-        }
+        resolvedEffects = new List<Effect>();
+        resolvedEffects.AddRange(Effect.StackResolveEffects(toggleEffects.effectList));
         //TODO: need to actually apply the effects after each group, how?
 
 
-       resolvedEffects = new List<Effect>();
-        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
-            resolvedEffects.AddRange(Effect.StackResolveEffects(activeEffects.effectList, eme));
-        }
+        resolvedEffects = new List<Effect>();
+        resolvedEffects.AddRange(Effect.StackResolveEffects(activeEffects.effectList));
         //TODO: need to actually apply the effects after each group, how?
 
 
-       resolvedEffects = new List<Effect>();
-        foreach(EffectModifierEnum eme in Enum.GetValues(typeof(EffectModifierEnum))){
-            resolvedEffects.AddRange(Effect.StackResolveEffects(instantEffects.effectList, eme));
-        }
+        resolvedEffects = new List<Effect>();
+        resolvedEffects.AddRange(Effect.StackResolveEffects(instantEffects.effectList));
         //TODO: need to actually apply the effects after each group, how?
           
 
